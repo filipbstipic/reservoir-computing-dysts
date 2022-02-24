@@ -1,6 +1,6 @@
 # Reservoir Computing for Chaotic Dynamical Systems
 
-This project was done as part of the mandatory group assignment for the [Deep Learning Course at ETH Zurich](http://da.inf.ethz.ch/teaching/2021/DeepLearning/) in Fall '21. It has received a grade of 5.775/6.0, whereas a grade of 6.0 by ETH Zurich standards implies "Good enough for submission to an international conference".
+This project is a continuation of the group project done for the [Deep Learning Course at ETH Zurich](http://da.inf.ethz.ch/teaching/2021/DeepLearning/) in Fall '21. It has received a grade of 5.775/6.0, whereas a grade of 6.0 by ETH Zurich standards implies "Good enough for submission to an international conference". The original group project repository can be found [here](https://github.com/FatjonZOGAJ/dysts/tree/reservoir_computing).
 
 For more information, please check our [report](report.pdf).
 
