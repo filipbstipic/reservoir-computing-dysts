@@ -1,0 +1,7350 @@
+{
+    "Aizawa": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 25
+        },
+        "RandomForest": {
+            "lags": 25,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.2857142857142857,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 1
+        }
+    },
+    "AnishchenkoAstakhov": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 25
+        },
+        "RandomForest": {
+            "lags": 25,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "NONE"
+        },
+        "Theta": {
+            "season_mode": "NONE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 5,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.42857142857142855,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 1
+        }
+    },
+    "Arneodo": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 5
+        },
+        "RandomForest": {
+            "lags": 25,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 2000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.42857142857142855,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 1
+        }
+    },
+    "ArnoldBeltramiChildress": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 25
+        },
+        "RandomForest": {
+            "lags": 10,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 10,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "NONE"
+        },
+        "Theta": {
+            "season_mode": "NONE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.2857142857142857,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 3
+        }
+    },
+    "ArnoldWeb": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 1
+        },
+        "RandomForest": {
+            "lags": 1,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "NONE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 2000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.5714285714285714,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 2
+        }
+    },
+    "BeerRNN": {
+        "ARIMA": {
+            "p": 1
+        },
+        "LinearRegressionModel": {
+            "lags": 25
+        },
+        "RandomForest": {
+            "lags": 10,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "NONE"
+        },
+        "FourTheta": {
+            "season_mode": "NONE"
+        },
+        "Theta": {
+            "season_mode": "NONE"
+        },
+        "TransformerModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "RNNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.42857142857142855,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 1
+        }
+    },
+    "BelousovZhabotinsky": {
+        "ARIMA": {
+            "p": 1
+        },
+        "LinearRegressionModel": {
+            "lags": 1
+        },
+        "RandomForest": {
+            "lags": 1,
+            "lags_exog": null
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "NONE"
+        },
+        "FourTheta": {
+            "season_mode": "NONE"
+        },
+        "Theta": {
+            "season_mode": "NONE"
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1
+        },
+        "RNNModel": {
+            "input_chunk_length": 5,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.42857142857142855,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 3
+        }
+    },
+    "BickleyJet": {
+        "ARIMA": {
+            "p": 10
+        },
+        "LinearRegressionModel": {
+            "lags": 10
+        },
+        "RandomForest": {
+            "lags": 5,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "NONE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.5714285714285714,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 1
+        }
+    },
+    "Blasius": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 5
+        },
+        "RandomForest": {
+            "lags": 25,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 10,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.2857142857142857,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 2
+        }
+    },
+    "BlinkingRotlet": {
+        "ARIMA": {
+            "p": 1
+        },
+        "LinearRegressionModel": {
+            "lags": 5
+        },
+        "RandomForest": {
+            "lags": 5,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "NONE"
+        },
+        "FourTheta": {
+            "season_mode": "NONE"
+        },
+        "Theta": {
+            "season_mode": "NONE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 10,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 2000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.5714285714285714,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 2
+        }
+    },
+    "BlinkingVortex": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 25
+        },
+        "RandomForest": {
+            "lags": 25,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "NONE"
+        },
+        "Theta": {
+            "season_mode": "NONE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.2857142857142857,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 1
+        }
+    },
+    "Bouali": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 1
+        },
+        "RandomForest": {
+            "lags": 25,
+            "lags_exog": null
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "NONE"
+        },
+        "FourTheta": {
+            "season_mode": "NONE"
+        },
+        "Theta": {
+            "season_mode": "NONE"
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 10,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 10,
+            "output_chunk_length": 1
+        },
+        "RNNModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 2000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.42857142857142855,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 1
+        }
+    },
+    "Bouali2": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 1
+        },
+        "RandomForest": {
+            "lags": 1,
+            "lags_exog": null
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "NONE"
+        },
+        "Theta": {
+            "season_mode": "NONE"
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "RNNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.5714285714285714,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 3
+        }
+    },
+    "BurkeShaw": {
+        "ARIMA": {
+            "p": 10
+        },
+        "LinearRegressionModel": {
+            "lags": 5
+        },
+        "RandomForest": {
+            "lags": 5,
+            "lags_exog": null
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "NONE"
+        },
+        "Theta": {
+            "season_mode": "NONE"
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 5,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "RNNModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.42857142857142855,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 2
+        }
+    },
+    "CaTwoPlus": {
+        "ARIMA": {
+            "p": 5
+        },
+        "LinearRegressionModel": {
+            "lags": 5
+        },
+        "RandomForest": {
+            "lags": 10,
+            "lags_exog": null
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "NONE"
+        },
+        "Theta": {
+            "season_mode": "NONE"
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 10,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 10,
+            "output_chunk_length": 1
+        },
+        "RNNModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.2857142857142857,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 2
+        }
+    },
+    "CaTwoPlusQuasiperiodic": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 25
+        },
+        "RandomForest": {
+            "lags": 25,
+            "lags_exog": null
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "NONE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 5,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "RNNModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.42857142857142855,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 1
+        }
+    },
+    "CellCycle": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 1
+        },
+        "RandomForest": {
+            "lags": 1,
+            "lags_exog": null
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 10,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "RNNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.2857142857142857,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 3
+        }
+    },
+    "CellularNeuralNetwork": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 1
+        },
+        "RandomForest": {
+            "lags": 1,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 10,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 10,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.42857142857142855,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 2
+        }
+    },
+    "Chen": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 10
+        },
+        "RandomForest": {
+            "lags": 1,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "NONE"
+        },
+        "FourTheta": {
+            "season_mode": "NONE"
+        },
+        "Theta": {
+            "season_mode": "NONE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 10,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.5714285714285714,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 1
+        }
+    },
+    "ChenLee": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 10
+        },
+        "RandomForest": {
+            "lags": 5,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "NONE"
+        },
+        "Theta": {
+            "season_mode": "NONE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 10,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 2000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.5714285714285714,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 1
+        }
+    },
+    "Chua": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 25
+        },
+        "RandomForest": {
+            "lags": 25,
+            "lags_exog": null
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "NONE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1
+        },
+        "RNNModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 2000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.5714285714285714,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 1
+        }
+    },
+    "CircadianRhythm": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 25
+        },
+        "RandomForest": {
+            "lags": 10,
+            "lags_exog": null
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "NONE"
+        },
+        "Theta": {
+            "season_mode": "NONE"
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 5,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "RNNModel": {
+            "input_chunk_length": 5,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 2000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.2857142857142857,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 1
+        }
+    },
+    "CoevolvingPredatorPrey": {
+        "ARIMA": {
+            "p": 1
+        },
+        "LinearRegressionModel": {
+            "lags": 10
+        },
+        "RandomForest": {
+            "lags": 5,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 5,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 5,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "NONE"
+        },
+        "Theta": {
+            "season_mode": "NONE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 10,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.42857142857142855,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 1
+        }
+    },
+    "Colpitts": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 25
+        },
+        "RandomForest": {
+            "lags": 25,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 5,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 10,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 10,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "NONE"
+        },
+        "Theta": {
+            "season_mode": "NONE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.2857142857142857,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 2
+        }
+    },
+    "Coullet": {
+        "ARIMA": {
+            "p": 5
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 10,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "NONE"
+        },
+        "Theta": {
+            "season_mode": "NONE"
+        },
+        "LinearRegressionModel": {
+            "lags": 3
+        },
+        "RandomForest": {
+            "lags": 3,
+            "lags_exog": null
+        },
+        "RNNModel": {
+            "input_chunk_length": 5,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 2000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.2857142857142857,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 3
+        }
+    },
+    "Dadras": {
+        "ARIMA": {
+            "p": 5
+        },
+        "LinearRegressionModel": {
+            "lags": 25
+        },
+        "RandomForest": {
+            "lags": 5,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.5714285714285714,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 1
+        }
+    },
+    "DequanLi": {
+        "ARIMA": {
+            "p": 5
+        },
+        "LinearRegressionModel": {
+            "lags": 5
+        },
+        "RandomForest": {
+            "lags": 25,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "NONE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 5,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 2000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.5714285714285714,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 3
+        }
+    },
+    "DoubleGyre": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 5
+        },
+        "RandomForest": {
+            "lags": 25,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "NONE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 2000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.2857142857142857,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 1
+        }
+    },
+    "DoublePendulum": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 5
+        },
+        "RandomForest": {
+            "lags": 25,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 5,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "NONE"
+        },
+        "FourTheta": {
+            "season_mode": "NONE"
+        },
+        "Theta": {
+            "season_mode": "NONE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 10,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.2857142857142857,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 3
+        }
+    },
+    "Duffing": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 25
+        },
+        "RandomForest": {
+            "lags": 5,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.42857142857142855,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 2
+        }
+    },
+    "ExcitableCell": {
+        "ARIMA": {
+            "p": 5
+        },
+        "LinearRegressionModel": {
+            "lags": 25
+        },
+        "RandomForest": {
+            "lags": 1,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "NONE"
+        },
+        "FourTheta": {
+            "season_mode": "NONE"
+        },
+        "Theta": {
+            "season_mode": "NONE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 10,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.2857142857142857,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 1
+        }
+    },
+    "Finance": {
+        "ARIMA": {
+            "p": 10
+        },
+        "LinearRegressionModel": {
+            "lags": 25
+        },
+        "RandomForest": {
+            "lags": 1,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "NONE"
+        },
+        "FourTheta": {
+            "season_mode": "NONE"
+        },
+        "Theta": {
+            "season_mode": "NONE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.42857142857142855,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 3
+        }
+    },
+    "FluidTrampoline": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 10
+        },
+        "RandomForest": {
+            "lags": 5,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "NONE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 2000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.2857142857142857,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 2
+        }
+    },
+    "ForcedBrusselator": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 25
+        },
+        "RandomForest": {
+            "lags": 25,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "NONE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.5714285714285714,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 1
+        }
+    },
+    "ForcedFitzHughNagumo": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 25
+        },
+        "RandomForest": {
+            "lags": 25,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "NONE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.42857142857142855,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 1
+        }
+    },
+    "ForcedVanDerPol": {
+        "ARIMA": {
+            "p": 1
+        },
+        "LinearRegressionModel": {
+            "lags": 25
+        },
+        "RandomForest": {
+            "lags": 10,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "NONE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.2857142857142857,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 3
+        }
+    },
+    "GenesioTesi": {
+        "ARIMA": {
+            "p": 5
+        },
+        "LinearRegressionModel": {
+            "lags": 1
+        },
+        "RandomForest": {
+            "lags": 5,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 5,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "NONE"
+        },
+        "Theta": {
+            "season_mode": "NONE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 2000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.5714285714285714,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 2
+        }
+    },
+    "GuckenheimerHolmes": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 25
+        },
+        "RandomForest": {
+            "lags": 25,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 2000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.2857142857142857,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 1
+        }
+    },
+    "Hadley": {
+        "ARIMA": {
+            "p": 25
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "NONE"
+        },
+        "FourTheta": {
+            "season_mode": "NONE"
+        },
+        "Theta": {
+            "season_mode": "NONE"
+        },
+        "LinearRegressionModel": {
+            "lags": 25
+        },
+        "RandomForest": {
+            "lags": 25,
+            "lags_exog": null
+        },
+        "RNNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.5714285714285714,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 3
+        }
+    },
+    "Halvorsen": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 25
+        },
+        "RandomForest": {
+            "lags": 25,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 5,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.42857142857142855,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 2
+        }
+    },
+    "HastingsPowell": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 25
+        },
+        "RandomForest": {
+            "lags": 25,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "NONE"
+        },
+        "FourTheta": {
+            "season_mode": "NONE"
+        },
+        "Theta": {
+            "season_mode": "NONE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.2857142857142857,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 3
+        }
+    },
+    "HenonHeiles": {
+        "ARIMA": {
+            "p": 25
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 5,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "NONE"
+        },
+        "Theta": {
+            "season_mode": "NONE"
+        },
+        "LinearRegressionModel": {
+            "lags": 3
+        },
+        "RandomForest": {
+            "lags": 3,
+            "lags_exog": null
+        },
+        "RNNModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.2857142857142857,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 2
+        }
+    },
+    "HindmarshRose": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 10
+        },
+        "RandomForest": {
+            "lags": 10,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 5,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "NONE"
+        },
+        "FourTheta": {
+            "season_mode": "NONE"
+        },
+        "Theta": {
+            "season_mode": "NONE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 2000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.42857142857142855,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 3
+        }
+    },
+    "Hopfield": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 25
+        },
+        "RandomForest": {
+            "lags": 25,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 5,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 10,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 10,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "NONE"
+        },
+        "FourTheta": {
+            "season_mode": "NONE"
+        },
+        "Theta": {
+            "season_mode": "NONE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.42857142857142855,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 1
+        }
+    },
+    "HyperBao": {
+        "ARIMA": {
+            "p": 5
+        },
+        "LinearRegressionModel": {
+            "lags": 1
+        },
+        "RandomForest": {
+            "lags": 5,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 10,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "NONE"
+        },
+        "FourTheta": {
+            "season_mode": "NONE"
+        },
+        "Theta": {
+            "season_mode": "NONE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 10,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.42857142857142855,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 1
+        }
+    },
+    "HyperCai": {
+        "ARIMA": {
+            "p": 10
+        },
+        "LinearRegressionModel": {
+            "lags": 25
+        },
+        "RandomForest": {
+            "lags": 10,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 5,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "NONE"
+        },
+        "Theta": {
+            "season_mode": "NONE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.42857142857142855,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 2
+        }
+    },
+    "HyperJha": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 25
+        },
+        "RandomForest": {
+            "lags": 10,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 5,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 5,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 2000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.5714285714285714,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 2
+        }
+    },
+    "HyperLorenz": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 25
+        },
+        "RandomForest": {
+            "lags": 25,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.5714285714285714,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 1
+        }
+    },
+    "HyperLu": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 1
+        },
+        "RandomForest": {
+            "lags": 1,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 10,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "NONE"
+        },
+        "Theta": {
+            "season_mode": "NONE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.5714285714285714,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 1
+        }
+    },
+    "HyperPang": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 5
+        },
+        "RandomForest": {
+            "lags": 1,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 5,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 10,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "NONE"
+        },
+        "FourTheta": {
+            "season_mode": "NONE"
+        },
+        "Theta": {
+            "season_mode": "NONE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 2000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.5714285714285714,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 1
+        }
+    },
+    "HyperQi": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 10
+        },
+        "RandomForest": {
+            "lags": 25,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 10,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 5,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "NONE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 2000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.2857142857142857,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 2
+        }
+    },
+    "HyperRossler": {
+        "ARIMA": {
+            "p": 1
+        },
+        "LinearRegressionModel": {
+            "lags": 5
+        },
+        "RandomForest": {
+            "lags": 1,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "NONE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 2000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.5714285714285714,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 2
+        }
+    },
+    "HyperWang": {
+        "ARIMA": {
+            "p": 5
+        },
+        "LinearRegressionModel": {
+            "lags": 10
+        },
+        "RandomForest": {
+            "lags": 5,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "NONE"
+        },
+        "FourTheta": {
+            "season_mode": "NONE"
+        },
+        "Theta": {
+            "season_mode": "NONE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 5,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.2857142857142857,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 1
+        }
+    },
+    "HyperXu": {
+        "ARIMA": {
+            "p": 10
+        },
+        "LinearRegressionModel": {
+            "lags": 25
+        },
+        "RandomForest": {
+            "lags": 25,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 5,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.5714285714285714,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 2
+        }
+    },
+    "HyperYan": {
+        "ARIMA": {
+            "p": 10
+        },
+        "LinearRegressionModel": {
+            "lags": 10
+        },
+        "RandomForest": {
+            "lags": 25,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "NONE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.5714285714285714,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 2
+        }
+    },
+    "HyperYangChen": {
+        "ARIMA": {
+            "p": 1
+        },
+        "LinearRegressionModel": {
+            "lags": 25
+        },
+        "RandomForest": {
+            "lags": 1,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "NONE"
+        },
+        "FourTheta": {
+            "season_mode": "NONE"
+        },
+        "Theta": {
+            "season_mode": "NONE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.2857142857142857,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 3
+        }
+    },
+    "IkedaDelay": {
+        "ARIMA": {
+            "p": 5
+        },
+        "LinearRegressionModel": {
+            "lags": 5
+        },
+        "RandomForest": {
+            "lags": 1,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "NONE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.2857142857142857,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 2
+        }
+    },
+    "IsothermalChemical": {
+        "ARIMA": {
+            "p": 5
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 10,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "LinearRegressionModel": {
+            "lags": 25
+        },
+        "RandomForest": {
+            "lags": 10,
+            "lags_exog": null
+        },
+        "RNNModel": {
+            "input_chunk_length": 10,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.42857142857142855,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 2
+        }
+    },
+    "ItikBanksTumor": {
+        "ARIMA": {
+            "p": 1
+        },
+        "LinearRegressionModel": {
+            "lags": 25
+        },
+        "RandomForest": {
+            "lags": 10,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 5,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 10,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "NONE"
+        },
+        "FourTheta": {
+            "season_mode": "NONE"
+        },
+        "Theta": {
+            "season_mode": "NONE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 5,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 2000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.5714285714285714,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 3
+        }
+    },
+    "JerkCircuit": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 25
+        },
+        "RandomForest": {
+            "lags": 5,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 5,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 2000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.5714285714285714,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 2
+        }
+    },
+    "KawczynskiStrizhak": {
+        "ARIMA": {
+            "p": 5
+        },
+        "LinearRegressionModel": {
+            "lags": 1
+        },
+        "RandomForest": {
+            "lags": 25,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 5,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.5714285714285714,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 1
+        }
+    },
+    "Laser": {
+        "ARIMA": {
+            "p": 1
+        },
+        "LinearRegressionModel": {
+            "lags": 1
+        },
+        "RandomForest": {
+            "lags": 5,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "NONE"
+        },
+        "FourTheta": {
+            "season_mode": "NONE"
+        },
+        "Theta": {
+            "season_mode": "NONE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.5714285714285714,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 2
+        }
+    },
+    "LiuChen": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 25
+        },
+        "RandomForest": {
+            "lags": 1,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 10,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 2000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.5714285714285714,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 2
+        }
+    },
+    "Lorenz": {
+        "ARIMA": {
+            "p": 10
+        },
+        "LinearRegressionModel": {
+            "lags": 10
+        },
+        "RandomForest": {
+            "lags": 1,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "NONE"
+        },
+        "Theta": {
+            "season_mode": "NONE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.2857142857142857,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 2
+        }
+    },
+    "Lorenz84": {
+        "ARIMA": {
+            "p": 10
+        },
+        "LinearRegressionModel": {
+            "lags": 5
+        },
+        "RandomForest": {
+            "lags": 5,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 5,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 2000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.42857142857142855,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 2
+        }
+    },
+    "Lorenz96": {
+        "ARIMA": {
+            "p": 5
+        },
+        "LinearRegressionModel": {
+            "lags": 10
+        },
+        "RandomForest": {
+            "lags": 5,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "NONE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 5,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 2000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.5714285714285714,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 1
+        }
+    },
+    "LorenzBounded": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 10
+        },
+        "RandomForest": {
+            "lags": 1,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 10,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "NONE"
+        },
+        "Theta": {
+            "season_mode": "NONE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 5,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.5714285714285714,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 1
+        }
+    },
+    "LorenzCoupled": {
+        "ARIMA": {
+            "p": 10
+        },
+        "LinearRegressionModel": {
+            "lags": 10
+        },
+        "RandomForest": {
+            "lags": 5,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 10,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "NONE"
+        },
+        "FourTheta": {
+            "season_mode": "NONE"
+        },
+        "Theta": {
+            "season_mode": "NONE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.2857142857142857,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 1
+        }
+    },
+    "LorenzStenflo": {
+        "ARIMA": {
+            "p": 5
+        },
+        "LinearRegressionModel": {
+            "lags": 10
+        },
+        "RandomForest": {
+            "lags": 10,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 5,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 10,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "NONE"
+        },
+        "Theta": {
+            "season_mode": "NONE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 5,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.2857142857142857,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 1
+        }
+    },
+    "LuChen": {
+        "ARIMA": {
+            "p": 10
+        },
+        "LinearRegressionModel": {
+            "lags": 25
+        },
+        "RandomForest": {
+            "lags": 25,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "NONE"
+        },
+        "Theta": {
+            "season_mode": "NONE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 2000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.2857142857142857,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 3
+        }
+    },
+    "LuChenCheng": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 25
+        },
+        "RandomForest": {
+            "lags": 25,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "NONE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 2000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.2857142857142857,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 2
+        }
+    },
+    "MacArthur": {
+        "ARIMA": {
+            "p": 5
+        },
+        "LinearRegressionModel": {
+            "lags": 1
+        },
+        "RandomForest": {
+            "lags": 1,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "NONE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 10,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 2000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.5714285714285714,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 3
+        }
+    },
+    "MackeyGlass": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 25
+        },
+        "RandomForest": {
+            "lags": 25,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 5,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "NONE"
+        },
+        "Theta": {
+            "season_mode": "NONE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.42857142857142855,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 3
+        }
+    },
+    "MooreSpiegel": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 25
+        },
+        "RandomForest": {
+            "lags": 5,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 5,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "NONE"
+        },
+        "Theta": {
+            "season_mode": "NONE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 5,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 2000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.42857142857142855,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 1
+        }
+    },
+    "MultiChua": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 1
+        },
+        "RandomForest": {
+            "lags": 10,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 2000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.42857142857142855,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 1
+        }
+    },
+    "NewtonLiepnik": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 5
+        },
+        "RandomForest": {
+            "lags": 25,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 10,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "NONE"
+        },
+        "Theta": {
+            "season_mode": "NONE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 5,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.5714285714285714,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 1
+        }
+    },
+    "NoseHoover": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 10
+        },
+        "RandomForest": {
+            "lags": 5,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "NONE"
+        },
+        "Theta": {
+            "season_mode": "NONE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 10,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.42857142857142855,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 2
+        }
+    },
+    "NuclearQuadrupole": {
+        "ARIMA": {
+            "p": 10
+        },
+        "LinearRegressionModel": {
+            "lags": 10
+        },
+        "RandomForest": {
+            "lags": 10,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.42857142857142855,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 1
+        }
+    },
+    "OscillatingFlow": {
+        "ARIMA": {
+            "p": 10
+        },
+        "LinearRegressionModel": {
+            "lags": 25
+        },
+        "RandomForest": {
+            "lags": 10,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 10,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 10,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "NONE"
+        },
+        "FourTheta": {
+            "season_mode": "NONE"
+        },
+        "Theta": {
+            "season_mode": "NONE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 2000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.2857142857142857,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 2
+        }
+    },
+    "PanXuZhou": {
+        "ARIMA": {
+            "p": 5
+        },
+        "LinearRegressionModel": {
+            "lags": 5
+        },
+        "RandomForest": {
+            "lags": 1,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 5,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "NONE"
+        },
+        "Theta": {
+            "season_mode": "NONE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.42857142857142855,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 2
+        }
+    },
+    "PehlivanWei": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 25
+        },
+        "RandomForest": {
+            "lags": 10,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "NONE"
+        },
+        "FourTheta": {
+            "season_mode": "NONE"
+        },
+        "Theta": {
+            "season_mode": "NONE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 10,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.5714285714285714,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 2
+        }
+    },
+    "PiecewiseCircuit": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 25
+        },
+        "RandomForest": {
+            "lags": 25,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "NONE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 2000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.42857142857142855,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 2
+        }
+    },
+    "Qi": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 5
+        },
+        "RandomForest": {
+            "lags": 1,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 5,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "NONE"
+        },
+        "Theta": {
+            "season_mode": "NONE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.2857142857142857,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 1
+        }
+    },
+    "QiChen": {
+        "ARIMA": {
+            "p": 5
+        },
+        "LinearRegressionModel": {
+            "lags": 5
+        },
+        "RandomForest": {
+            "lags": 25,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 10,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 10,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "NONE"
+        },
+        "FourTheta": {
+            "season_mode": "NONE"
+        },
+        "Theta": {
+            "season_mode": "NONE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 2000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.5714285714285714,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 3
+        }
+    },
+    "RabinovichFabrikant": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 10
+        },
+        "RandomForest": {
+            "lags": 5,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.42857142857142855,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 2
+        }
+    },
+    "RayleighBenard": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 25
+        },
+        "RandomForest": {
+            "lags": 25,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 10,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 10,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.42857142857142855,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 3
+        }
+    },
+    "RikitakeDynamo": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 1
+        },
+        "RandomForest": {
+            "lags": 1,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 10,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 10,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 10,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 2000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.42857142857142855,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 1
+        }
+    },
+    "Rossler": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 25
+        },
+        "RandomForest": {
+            "lags": 25,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "NONE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.42857142857142855,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 3
+        }
+    },
+    "Rucklidge": {
+        "ARIMA": {
+            "p": 5
+        },
+        "LinearRegressionModel": {
+            "lags": 25
+        },
+        "RandomForest": {
+            "lags": 5,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 10,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "NONE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 10,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.2857142857142857,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 2
+        }
+    },
+    "Sakarya": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 1
+        },
+        "RandomForest": {
+            "lags": 10,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 5,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "NONE"
+        },
+        "FourTheta": {
+            "season_mode": "NONE"
+        },
+        "Theta": {
+            "season_mode": "NONE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 10,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.42857142857142855,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 2
+        }
+    },
+    "SaltonSea": {
+        "ARIMA": {
+            "p": 5
+        },
+        "LinearRegressionModel": {
+            "lags": 25
+        },
+        "RandomForest": {
+            "lags": 25,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 10,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 5,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "NONE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 5,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.2857142857142857,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 3
+        }
+    },
+    "SanUmSrisuchinwong": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 5
+        },
+        "RandomForest": {
+            "lags": 1,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 5,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 5,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "NONE"
+        },
+        "FourTheta": {
+            "season_mode": "NONE"
+        },
+        "Theta": {
+            "season_mode": "NONE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 5,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.2857142857142857,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 1
+        }
+    },
+    "ScrollDelay": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 10
+        },
+        "RandomForest": {
+            "lags": 10,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "NONE"
+        },
+        "Theta": {
+            "season_mode": "NONE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 2000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.42857142857142855,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 2
+        }
+    },
+    "ShimizuMorioka": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 10
+        },
+        "RandomForest": {
+            "lags": 10,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.42857142857142855,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 3
+        }
+    },
+    "SprottA": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 10
+        },
+        "RandomForest": {
+            "lags": 10,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "NONE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 10,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 2000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.5714285714285714,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 3
+        }
+    },
+    "SprottB": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 5
+        },
+        "RandomForest": {
+            "lags": 1,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 5,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 5,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "NONE"
+        },
+        "Theta": {
+            "season_mode": "NONE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.5714285714285714,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 1
+        }
+    },
+    "SprottC": {
+        "ARIMA": {
+            "p": 5
+        },
+        "LinearRegressionModel": {
+            "lags": 10
+        },
+        "RandomForest": {
+            "lags": 25,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 10,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "NONE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.2857142857142857,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 1
+        }
+    },
+    "SprottD": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 10
+        },
+        "RandomForest": {
+            "lags": 25,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.42857142857142855,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 2
+        }
+    },
+    "SprottDelay": {
+        "ARIMA": {
+            "p": 10
+        },
+        "LinearRegressionModel": {
+            "lags": 25
+        },
+        "RandomForest": {
+            "lags": 5,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 10,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "NONE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 2000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.42857142857142855,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 1
+        }
+    },
+    "SprottE": {
+        "ARIMA": {
+            "p": 5
+        },
+        "LinearRegressionModel": {
+            "lags": 25
+        },
+        "RandomForest": {
+            "lags": 1,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "NONE"
+        },
+        "FourTheta": {
+            "season_mode": "NONE"
+        },
+        "Theta": {
+            "season_mode": "NONE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 5,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.5714285714285714,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 3
+        }
+    },
+    "SprottF": {
+        "ARIMA": {
+            "p": 1
+        },
+        "LinearRegressionModel": {
+            "lags": 25
+        },
+        "RandomForest": {
+            "lags": 25,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 2000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.5714285714285714,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 1
+        }
+    },
+    "SprottG": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 10
+        },
+        "RandomForest": {
+            "lags": 10,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "NONE"
+        },
+        "Theta": {
+            "season_mode": "NONE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.2857142857142857,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 1
+        }
+    },
+    "SprottH": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 25
+        },
+        "RandomForest": {
+            "lags": 25,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 5,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 10,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "NONE"
+        },
+        "FourTheta": {
+            "season_mode": "NONE"
+        },
+        "Theta": {
+            "season_mode": "NONE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 5,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.5714285714285714,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 2
+        }
+    },
+    "SprottI": {
+        "ARIMA": {
+            "p": 5
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 5,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "LinearRegressionModel": {
+            "lags": 25
+        },
+        "RandomForest": {
+            "lags": 3,
+            "lags_exog": null
+        },
+        "RNNModel": {
+            "input_chunk_length": 5,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 2000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.5714285714285714,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 1
+        }
+    },
+    "SprottJ": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 25
+        },
+        "RandomForest": {
+            "lags": 25,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "NONE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.2857142857142857,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 3
+        }
+    },
+    "SprottJerk": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 25
+        },
+        "RandomForest": {
+            "lags": 25,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "NONE"
+        },
+        "FourTheta": {
+            "season_mode": "NONE"
+        },
+        "Theta": {
+            "season_mode": "NONE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.5714285714285714,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 1
+        }
+    },
+    "SprottK": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 25
+        },
+        "RandomForest": {
+            "lags": 25,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "NONE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 2000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.2857142857142857,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 2
+        }
+    },
+    "SprottL": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 5
+        },
+        "RandomForest": {
+            "lags": 25,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.2857142857142857,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 1
+        }
+    },
+    "SprottM": {
+        "ARIMA": {
+            "p": 10
+        },
+        "LinearRegressionModel": {
+            "lags": 25
+        },
+        "RandomForest": {
+            "lags": 25,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "NONE"
+        },
+        "Theta": {
+            "season_mode": "NONE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.2857142857142857,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 3
+        }
+    },
+    "SprottMore": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 25
+        },
+        "RandomForest": {
+            "lags": 25,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 2000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.5714285714285714,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 2
+        }
+    },
+    "SprottN": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 25
+        },
+        "RandomForest": {
+            "lags": 25,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.2857142857142857,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 1
+        }
+    },
+    "SprottO": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 25
+        },
+        "RandomForest": {
+            "lags": 25,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.42857142857142855,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 3
+        }
+    },
+    "SprottP": {
+        "ARIMA": {
+            "p": 10
+        },
+        "LinearRegressionModel": {
+            "lags": 25
+        },
+        "RandomForest": {
+            "lags": 25,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 2000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.42857142857142855,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 2
+        }
+    },
+    "SprottQ": {
+        "ARIMA": {
+            "p": 5
+        },
+        "LinearRegressionModel": {
+            "lags": 25
+        },
+        "RandomForest": {
+            "lags": 5,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 10,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "NONE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.2857142857142857,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 3
+        }
+    },
+    "SprottR": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 5
+        },
+        "RandomForest": {
+            "lags": 25,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "NONE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 2000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.2857142857142857,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 2
+        }
+    },
+    "SprottS": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 25
+        },
+        "RandomForest": {
+            "lags": 5,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "NONE"
+        },
+        "Theta": {
+            "season_mode": "NONE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 10,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.2857142857142857,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 2
+        }
+    },
+    "SprottTorus": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 1
+        },
+        "RandomForest": {
+            "lags": 5,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 5,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 5,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "NONE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 10,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.2857142857142857,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 2
+        }
+    },
+    "StickSlipOscillator": {
+        "ARIMA": {
+            "p": 5
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "LinearRegressionModel": {
+            "lags": 25
+        },
+        "RandomForest": {
+            "lags": 5,
+            "lags_exog": null
+        },
+        "RNNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 2000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.2857142857142857,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 1
+        }
+    },
+    "SwingingAtwood": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 25
+        },
+        "RandomForest": {
+            "lags": 25,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 5,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "NONE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.42857142857142855,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 1
+        }
+    },
+    "Thomas": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 5
+        },
+        "RandomForest": {
+            "lags": 1,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 5,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 5,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.5714285714285714,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 1
+        }
+    },
+    "ThomasLabyrinth": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 10
+        },
+        "RandomForest": {
+            "lags": 25,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 5,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "NONE"
+        },
+        "Theta": {
+            "season_mode": "NONE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 10,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.2857142857142857,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 1
+        }
+    },
+    "Torus": {
+        "ARIMA": {
+            "p": 10
+        },
+        "LinearRegressionModel": {
+            "lags": 25
+        },
+        "RandomForest": {
+            "lags": 25,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 10,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 10,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 2000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.2857142857142857,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 3
+        }
+    },
+    "Tsucs2": {
+        "ARIMA": {
+            "p": 10
+        },
+        "LinearRegressionModel": {
+            "lags": 25
+        },
+        "RandomForest": {
+            "lags": 25,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "NONE"
+        },
+        "Theta": {
+            "season_mode": "NONE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.5714285714285714,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 3
+        }
+    },
+    "TurchinHanski": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 25
+        },
+        "RandomForest": {
+            "lags": 25,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "NONE"
+        },
+        "Theta": {
+            "season_mode": "NONE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 10,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.5714285714285714,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 2
+        }
+    },
+    "VallisElNino": {
+        "ARIMA": {
+            "p": 5
+        },
+        "LinearRegressionModel": {
+            "lags": 1
+        },
+        "RandomForest": {
+            "lags": 25,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 10,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 10,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "NONE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.5714285714285714,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 1
+        }
+    },
+    "VossDelay": {
+        "ARIMA": {
+            "p": 1
+        },
+        "LinearRegressionModel": {
+            "lags": 25
+        },
+        "RandomForest": {
+            "lags": 1,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.5714285714285714,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 1
+        }
+    },
+    "WangSun": {
+        "ARIMA": {
+            "p": 10
+        },
+        "LinearRegressionModel": {
+            "lags": 1
+        },
+        "RandomForest": {
+            "lags": 25,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 10,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 5,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "NONE"
+        },
+        "Theta": {
+            "season_mode": "NONE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 10,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 2000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.42857142857142855,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 1
+        }
+    },
+    "WindmiReduced": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 25
+        },
+        "RandomForest": {
+            "lags": 10,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "ADDITIVE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 2000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.5714285714285714,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 3
+        }
+    },
+    "YuWang": {
+        "ARIMA": {
+            "p": 25
+        },
+        "LinearRegressionModel": {
+            "lags": 25
+        },
+        "RandomForest": {
+            "lags": 5,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 10,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "NONE"
+        },
+        "FourTheta": {
+            "season_mode": "NONE"
+        },
+        "Theta": {
+            "season_mode": "NONE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.2857142857142857,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 1
+        }
+    },
+    "YuWang2": {
+        "ARIMA": {
+            "p": 5
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 5,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "NONE"
+        },
+        "FourTheta": {
+            "season_mode": "ADDITIVE"
+        },
+        "Theta": {
+            "season_mode": "ADDITIVE"
+        },
+        "LinearRegressionModel": {
+            "lags": 5
+        },
+        "RandomForest": {
+            "lags": 3,
+            "lags_exog": null
+        },
+        "RNNModel": {
+            "input_chunk_length": 100,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.2857142857142857,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 2
+        }
+    },
+    "ZhouChen": {
+        "ARIMA": {
+            "p": 5
+        },
+        "LinearRegressionModel": {
+            "lags": 1
+        },
+        "RandomForest": {
+            "lags": 1,
+            "lags_exog": null
+        },
+        "NBEATSModel": {
+            "input_chunk_length": 25,
+            "output_chunk_length": 1
+        },
+        "TCNModel": {
+            "input_chunk_length": 10,
+            "output_chunk_length": 1
+        },
+        "TransformerModel": {
+            "input_chunk_length": 50,
+            "output_chunk_length": 1
+        },
+        "AutoARIMA": {},
+        "FFT": {},
+        "NaiveDrift": {},
+        "NaiveMean": {},
+        "NaiveSeasonal": {},
+        "Prophet": {},
+        "ExponentialSmoothing": {
+            "seasonal": "NONE"
+        },
+        "FourTheta": {
+            "season_mode": "NONE"
+        },
+        "Theta": {
+            "season_mode": "NONE"
+        },
+        "RNNModel": {
+            "input_chunk_length": 5,
+            "output_chunk_length": 1,
+            "model": "LSTM",
+            "n_rnn_layers": 2,
+            "n_epochs": 200
+        },
+        "esn_GRU": {
+            "reservoir_size": 1000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.42857142857142855,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 2
+        }
+    },
+    "AtmosphericRegime": {
+        "esn_GRU": {
+            "reservoir_size": 2000,
+            "sigma_input": 1,
+            "dynamics_fit_ratio": 0.42857142857142855,
+            "regularization": 0.0,
+            "scaler_tt": "Standard",
+            "cell_type": "GRU",
+            "solver": "pinv",
+            "seed": 1
+        }
+    }
+}
