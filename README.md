@@ -1,6 +1,6 @@
 # Reservoir Computing for Chaotic Dynamical Systems
 
-This project is a continuation of the group project done for the [Deep Learning Course at ETH Zurich](http://da.inf.ethz.ch/teaching/2021/DeepLearning/) in Fall '21. It has received a grade of 5.775/6.0, whereas a grade of 6.0 by ETH Zurich standards implies "Good enough for submission to an international conference". The original group project repository can be found [here](https://github.com/FatjonZOGAJ/dysts/tree/reservoir_computing).
+This project is the continuation of the group project done for the [Deep Learning Course at ETH Zurich](http://da.inf.ethz.ch/teaching/2021/DeepLearning/) in Fall '21. It has received a grade of 5.775/6.0, whereas a grade of 6.0 by ETH Zurich standards implies "Good enough for submission to an international conference". The original group project repository can be found [here](https://github.com/FatjonZOGAJ/dysts/tree/reservoir_computing).
 
 For more information, please check the [report](report.pdf).
 
@@ -9,14 +9,10 @@ __Abstract:__ Chaotic dynamical systems continue to puzzle and amaze practitione
 
 
 ## Main installation
-    git clone https://github.com/FatjonZOGAJ/dysts.git
-    cd dysts
-    git checkout reservoir_computing
 
     virtualenv rc --python=python3.7
     source rc/bin/activate
     pip install -r req.txt
-    pip install -i https://test.pypi.org/simple/ EchoTorch
 
 # Code
 We have adapted the code from the https://github.com/williamgilpin/dysts repository which provides the initial implementations of the dynamical chaos systems as well as the original benchmark. 
@@ -25,23 +21,7 @@ This additionally will allow for easier pull requests when we push our changes t
 
 # Rerunning Experiments
 
-We provide bash scripts to reproduce our experiments and results.
-After some manual hyperparameter evaluation we have identified multiple Reservoir Computing and RNN models over which we run an extensive hyperparameter search.
+To get solid performance run:
 
-    bash scripts/test_find_hyperparameter_cells.sh
+python main.py --reservoir_size=1000  --radius=0.9 --sparsity=0.1 --alpha=1.0 --reg=1e-7 --seed=10
 
-Note that this will only run a single hyperparameter configuration (indicated by _--test_single_config 1_) as rerunning all experiments takes significant computational resources.
-Commands to execute the full experiments on Euler have been provided in the latter part of the file (indicated by _bsub_).
-
-Other experiments (including some which were not followed further due to bad performance) can be ran by calling:
-
-    bash scripts/default_tests.sh
-
-These were included for completeness reasons.
-
-To get some more info about the results, call the following:
-    
-    cd benchmarks/results
-    python3 read_results.py
-
-This will print out average ranks and scores for the different models over all dynamical systems and also provide an overview about which models performed best and worst.

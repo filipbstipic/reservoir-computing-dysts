@@ -1,15 +1,27 @@
-#!/usr/bin/python
-
 import sys
 import os
 import json
 
 import dysts
-from benchmarks.find_hyperparameters import get_model
 from dysts.datasets import *
+import collections
 
 import pandas as pd
 import numpy as np
+
+module_paths = [
+    os.path.abspath(os.getcwd()),
+]
+
+for module_path in module_paths:
+    print(module_path)
+    if module_path not in sys.path:
+        sys.path.append(module_path)
+
+import models
+from models.ESN_clean import ESN
+from benchmarks.results.read_results import ResultsObject
+
 
 import darts
 from darts.models import *
@@ -17,30 +29,24 @@ from darts import TimeSeries
 import darts.models
 
 
-# to change
-pts_per_period = 15  # 100
-hyp_file_ending = '' # '_DEBUG_DEBUG_DEBUG'
-results_path_ending = '' # can also be '_DEBUG'
-
 cwd = os.path.dirname(os.path.realpath(__file__))
-input_path = os.path.dirname(cwd)  + f"/dysts/data/test_univariate__pts_per_period_{pts_per_period}__periods_12.json"
+# cwd = os.getcwd()
+input_path = os.path.dirname(cwd)  + "/dysts/data/test_univariate__pts_per_period_100__periods_12.json"
+## link to TEST data
 
 dataname = os.path.splitext(os.path.basename(os.path.split(input_path)[-1]))[0]
 output_path = cwd + "/results/results_" + dataname + ".json"
 dataname = dataname.replace("test", "train" )
-hyperparameter_path = cwd + "/hyperparameters/hyperparameters_" + dataname + f"{hyp_file_ending}.json"
+hyperparameter_path = cwd + "/hyperparameters/hyperparameters_" + dataname + ".json"
 
 metric_list = [
     'coefficient_of_variation',
     'mae',
     'mape',
     'marre',
-    #'mase', # requires scaling with train partition; difficult to report accurately
     'mse',
-    #'ope', # runs into issues with zero handling
     'r2_score',
     'rmse',
-    #'rmsle', # requires positive only time series
     'smape'
 ]
 
@@ -56,6 +62,12 @@ except FileNotFoundError:
     all_results = dict()
     
 
+failed_combinations = collections.defaultdict(list)
+METRIC = 'smape'
+results_path = os.getcwd() + '/benchmarks/results/results_test_univariate__pts_per_period_100__periods_12.json'
+results = ResultsObject(path=results_path)
+results.sort_results(print_out=False, metric=METRIC)
+
 for equation_name in equation_data.dataset:
     
     train_data = np.copy(np.array(equation_data.dataset[equation_name]["values"]))
@@ -69,40 +81,59 @@ for equation_name in equation_data.dataset:
     
     all_results[equation_name]["values"] = np.squeeze(y_val)[:-1].tolist()
     
-    for model_name in all_hyperparameters[equation_name].keys():
+    for model_name in list(all_hyperparameters[equation_name].keys()) + ['ESN']:
+        
         if model_name in all_results[equation_name].keys():
             continue
+            
         all_results[equation_name][model_name] = dict()
         
         print(equation_name + " " + model_name, flush=True)
         
-        # look up season object from string
-        for hyperparameter_name in all_hyperparameters[equation_name][model_name]:
-            if "season" in hyperparameter_name:
-                old_val = all_hyperparameters[equation_name][model_name][hyperparameter_name]
-                all_hyperparameters[equation_name][model_name][hyperparameter_name] = getattr(darts.utils.utils.SeasonalityMode, old_val)
-
-        model = get_model(model_name)
-
-        if model_name == 'Prophet':
-            df = pd.DataFrame(np.squeeze(y_train_ts.values()))
-            df.index = pd.DatetimeIndex(y_train_ts.time_index)
-            y_train_ts = TimeSeries.from_dataframe(df)
-
-        model.fit(y_train_ts)
-        y_val_pred = model.predict(len(y_val))
-        pred_y = TimeSeries.from_dataframe(pd.DataFrame(np.squeeze(y_val_pred.values())))
-        true_y = TimeSeries.from_dataframe(pd.DataFrame(np.squeeze(y_val)[:-1]))
+        if model_name == 'ESN':
+            
+            print(y_train.shape)
+            
+            model = ESN()
+            model.fit(y_train)
+            
+            y_val_pred = model.predict(len(y_val))
+            pred_y = TimeSeries.from_dataframe(pd.DataFrame(np.squeeze(y_val_pred)))
+            true_y = TimeSeries.from_dataframe(pd.DataFrame(np.squeeze(y_val)[:-1]))
+            
+            all_results[equation_name][model_name]["prediction"] = np.squeeze(y_val_pred).tolist()
+            
+        else:
+            
+            model = getattr(darts.models, model_name)(**all_hyperparameters[equation_name][model_name])
+                                                            
+            model.fit(y_train_ts)
+            y_val_pred = model.predict(len(y_val))
+            pred_y = TimeSeries.from_dataframe(pd.DataFrame(np.squeeze(y_val_pred.values())))
+            true_y = TimeSeries.from_dataframe(pd.DataFrame(np.squeeze(y_val)[:-1]))
         
-        all_results[equation_name][model_name]["prediction"] = np.squeeze(y_val_pred.values()).tolist()
+            all_results[equation_name][model_name]["prediction"] = np.squeeze(y_val_pred.values()).tolist()
+        
         
         for metric_name in metric_list:
+            
             metric_func = getattr(darts.metrics.metrics, metric_name)
-            all_results[equation_name][model_name][metric_name] = metric_func(true_y, pred_y)
-        
-        with open(output_path[:-5] + f'{results_path_ending}.json', 'w') as f:
-            json.dump(all_results, f, indent=4)   
-        
+            score = metric_func(true_y, pred_y)
+            #print(metric_name, score)
+            if metric_name == METRIC:
+                results.update_results(equation_name, model_name, score)
 
-
-
+    # TODO: print ranking relative to others for that dynamical system
+print('Failed combinations', failed_combinations)
+results.get_average_rank(model_name, print_out=True)
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
