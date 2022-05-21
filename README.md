@@ -12,7 +12,7 @@ __Abstract:__ Chaotic dynamical systems continue to puzzle and amaze practitione
 
     virtualenv rc --python=python3.7
     source rc/bin/activate
-    pip install -r req.txt
+    pip install -r requirements.txt
 
 # Code
 We have adapted the code from the https://github.com/williamgilpin/dysts repository which provides the initial implementations of the dynamical chaos systems as well as the original benchmark. 
