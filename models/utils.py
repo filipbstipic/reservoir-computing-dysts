@@ -10,6 +10,7 @@ import numpy as np
 import pandas as pd
 import torch
 from darts import TimeSeries
+import json
 
 from benchmarks.results.read_results import ResultsObject
 from dysts.datasets import load_file
@@ -74,7 +75,8 @@ def eval_single_dyn_syst(model, dataset):
             rank = results.update_results(dataset, model_name, score)
     return value, rank  # , model._cell.W_h
 
- 
+
+
 def eval_all_dyn_syst(model):
     cwd = os.path.dirname(os.path.realpath(__file__))
     # cwd = os.getcwd()
@@ -100,7 +102,6 @@ def eval_all_dyn_syst(model):
     results_path = os.getcwd() + '/benchmarks/results/results_test_univariate__pts_per_period_100__periods_12.json'
     results = ResultsObject(path=results_path)
     results.sort_results(print_out=False, metric=METRIC)
-    
     for equation_name in equation_data.dataset:
 
         train_data = np.copy(np.array(equation_data.dataset[equation_name]["values"]))
@@ -108,87 +109,11 @@ def eval_all_dyn_syst(model):
         split_point = int(5 / 6 * len(train_data))
         y_train, y_val = train_data[:split_point], train_data[split_point:]
         y_train_ts, y_test_ts = TimeSeries.from_dataframe(pd.DataFrame(train_data)).split_before(split_point)
-        
+
         try:
-            
-            model.fit(y_train)
+
+            model.fit(y_train_ts)
             y_val_pred = model.predict(len(y_val))
-
-        except Exception as e:
-            warnings.warn(f'Could not evaluate {equation_name} for {model_name} {e.args}')
-            failed_combinations[model_name].append(equation_name)
-            traceback.print_exc()
-            continue
-
-        pred_y = TimeSeries.from_dataframe(pd.DataFrame(np.squeeze(y_val_pred)))
-        true_y = TimeSeries.from_dataframe(pd.DataFrame(np.squeeze(y_val)[:-1]))
-        
-        #print(y_train.shape, y_val.shape)
-        #print(y_val_pred.shape)
-        #print(y_val.shape)
-        #print(np.squeeze(y_val)[:-1].shape)
-        
-        print('-----', equation_name)
-        
-        for metric_name in metric_list:
-            
-            metric_func = getattr(darts.metrics.metrics, metric_name)
-            score = metric_func(true_y, pred_y)
-            print(metric_name, score)
-            if metric_name == METRIC:
-                results.update_results(equation_name, model_name, score)
-
-        # TODO: print ranking relative to others for that dynamical system
-    print('Failed combinations', failed_combinations)
-    results.get_average_rank(model_name, print_out=True)
-
-'''
-def eval_all_dyn_syst(model):
-    cwd = os.path.dirname(os.path.realpath(__file__))
-    # cwd = os.getcwd()
-    input_path = os.path.dirname(cwd) + "/dysts/data/test_univariate__pts_per_period_100__periods_12.json"
-    dataname = os.path.splitext(os.path.basename(os.path.split(input_path)[-1]))[0]
-    output_path = cwd + "/results/results_" + dataname + ".json"
-    dataname = dataname.replace("test", "train")
-    hyperparameter_path = cwd + "/hyperparameters/hyperparameters_" + dataname + ".json"
-    metric_list = [
-        'coefficient_of_variation',
-        'mae',
-        'mape',
-        'marre',
-        # 'mase', # requires scaling with train partition; difficult to report accurately
-        'mse',
-        # 'ope', # runs into issues with zero handling
-        'r2_score',
-        'rmse',
-        # 'rmsle', # requires positive only time series
-        'smape'
-    ]
-    equation_data = load_file(input_path)
-    model_name = model.model_name
-    failed_combinations = collections.defaultdict(list)
-    METRIC = 'smape'
-    results_path = os.getcwd() + '/benchmarks/results/results_test_univariate__pts_per_period_100__periods_12.json'
-    results = ResultsObject(path=results_path)
-    results.sort_results(print_out=False, metric=METRIC)
-    for equation_name in equation_data.dataset:
-
-        train_data = np.copy(np.array(equation_data.dataset[equation_name]["values"]))
-
-        split_point = int(5 / 6 * len(train_data))
-        y_train, y_val = train_data[:split_point], train_data[split_point:]
-        y_train_ts, y_test_ts = TimeSeries.from_dataframe(pd.DataFrame(train_data)).split_before(split_point)
-
-        try:
-
-            if model.model_name == 'RC-CHAOS-ESN':
-
-                model.fit(y_train_ts)
-                y_val_pred = model.predict(len(y_val))
-
-            else:
-                model.fit(y_train_ts)
-                y_val_pred = model.predict(len(y_val))
 
         except Exception as e:
             warnings.warn(f'Could not evaluate {equation_name} for {model_name} {e.args}')
@@ -199,7 +124,82 @@ def eval_all_dyn_syst(model):
         pred_y = TimeSeries.from_dataframe(pd.DataFrame(np.squeeze(y_val_pred.values())))
         true_y = TimeSeries.from_dataframe(pd.DataFrame(np.squeeze(y_val)[:-1]))
 
-        print('-----', equation_name, y_train_ts.values().shape)
+        print('-----', equation_name)
+        for metric_name in metric_list:
+            metric_func = getattr(darts.metrics.metrics, metric_name)
+            score = metric_func(true_y, pred_y)
+            print(metric_name, score)
+            if metric_name == METRIC:
+                results.update_results(equation_name, model_name, score)
+
+        # TODO: print ranking relative to others for that dynamical system
+    print('Failed combinations', failed_combinations)
+    results.get_average_rank(model_name, print_out=True)
+    
+    
+def eval_all_dyn_syst_best_hyperparams(model, pts_per_period=100):
+    
+    cwd = os.path.dirname(os.path.realpath(__file__))
+    
+    input_path = os.path.dirname(cwd) + "/dysts/data/test_univariate__pts_per_period_" + str(pts_per_period)+ "__periods_12.json"
+    dataname = os.path.splitext(os.path.basename(os.path.split(input_path)[-1]))[0]
+    output_path = cwd + "/results/results_" + dataname + ".json"
+    dataname = dataname.replace("test", "train")
+    
+    hyperparameter_path = os.getcwd() + "/benchmarks/hyperparameters/hyperparameters_" + dataname + "_ESN.json"
+    
+    hyperparameters_file = open(hyperparameter_path)
+    hyperparameters = json.load(hyperparameters_file)
+    
+    #print(input_path)
+    #print(hyperparameter_path)
+    
+    metric_list = [
+        'coefficient_of_variation',
+        'mae',
+        'mape',
+        'marre',
+        'mse',
+        'r2_score',
+        'rmse',
+        'smape'
+    ]
+    equation_data = load_file(input_path)
+    model_name = model.model_name
+    failed_combinations = collections.defaultdict(list)
+    METRIC = 'smape'
+    results_path = os.getcwd() + '/benchmarks/results/results_test_univariate__pts_per_period_' + str(pts_per_period)+ '__periods_12.json'
+    results = ResultsObject(path=results_path)
+    results.sort_results(print_out=False, metric=METRIC)
+    
+    print("Input path ", input_path)
+    print("Hyperparameter path ", hyperparameter_path)
+    print("Results path ", results_path)
+    
+    for equation_name in equation_data.dataset:
+
+        train_data = np.copy(np.array(equation_data.dataset[equation_name]["values"]))
+
+        split_point = int(5 / 6 * len(train_data))
+        y_train, y_val = train_data[:split_point], train_data[split_point:]
+        y_train_ts, y_test_ts = TimeSeries.from_dataframe(pd.DataFrame(train_data)).split_before(split_point)
+
+        try:
+            
+            model.set_hyperparams(hyperparameters[equation_name]['ESN'])
+            model.fit(y_train_ts)
+            y_val_pred = model.predict(len(y_val))
+
+        except Exception as e:
+            warnings.warn(f'Could not evaluate {equation_name} for {model_name} {e.args}')
+            failed_combinations[model_name].append(equation_name)
+            traceback.print_exc()
+            continue
+
+        pred_y = TimeSeries.from_dataframe(pd.DataFrame(np.squeeze(y_val_pred.values())))
+        true_y = TimeSeries.from_dataframe(pd.DataFrame(np.squeeze(y_val)[:-1]))
+
+        print('-----', equation_name)
         for metric_name in metric_list:
             metric_func = getattr(darts.metrics.metrics, metric_name)
             score = metric_func(true_y, pred_y)
@@ -211,7 +211,6 @@ def eval_all_dyn_syst(model):
     print('Failed combinations', failed_combinations)
     results.get_average_rank(model_name, print_out=True)
 
-'''   
     
 
 def str2bool(v):
@@ -234,49 +233,15 @@ def get_hyperparam_parser():
     return args
 
 
-class scaler(object):
-    def __init__(self, tt):
-        self.tt = tt
-        self.data_min = 0
-        self.data_max = 0
-        self.data_mean = 0
-        self.data_std = 0
-
-    def scaleData(self, input_sequence, reuse=None):
-        # data_mean = np.mean(train_input_sequence,0)
-        # data_std = np.std(train_input_sequence,0)
-        # train_input_sequence = (train_input_sequence-data_mean)/data_std
-        if reuse == None:
-            self.data_mean = np.mean(input_sequence, 0)
-            self.data_std = np.std(input_sequence, 0)
-            self.data_min = np.min(input_sequence, 0)
-            self.data_max = np.max(input_sequence, 0)
-        if self.tt == "MinMaxZeroOne":
-            input_sequence = np.array((input_sequence - self.data_min) / (self.data_max - self.data_min))
-        elif self.tt == "Standard" or self.tt == "standard":
-            input_sequence = np.array((input_sequence - self.data_mean) / self.data_std)
-        elif self.tt != "no":
-            raise ValueError("Scaler not implemented.")
-        return input_sequence
-
-    def descaleData(self, input_sequence):
-        if self.tt == "MinMaxZeroOne":
-            input_sequence = np.array(input_sequence * (self.data_max - self.data_min) + self.data_min)
-        elif self.tt == "Standard" or self.tt == "standard":
-            input_sequence = np.array(input_sequence * self.data_std.T + self.data_mean)
-        elif self.tt != "no":
-            raise ValueError("Scaler not implemented.")
-        return input_sequence
-
 
 def getNewESNParser():
     parser = argparse.ArgumentParser()
     parser.add_argument("--reservoir_size", help="reservoir_size", type=int, default=1000)
     parser.add_argument("--sparsity", help="sparsity", type=float, default=0.1)
-    parser.add_argument("--radius", help="radius", type=float, default=1.0)
+    parser.add_argument("--radius", help="radius", type=float, default=0.95)
     parser.add_argument("--reg", help="regularization", type=float, default=1e-7)
     parser.add_argument("--alpha", help="alpha", type=float, default=1.0)
-    parser.add_argument("--seed", type=int, default=1)
+    parser.add_argument("--seed", type=int, default=10)
     # parser.add_argument("--resample", type=str2bool, default=False)
 
     return parser

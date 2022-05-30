@@ -3,6 +3,7 @@ import time
 import darts
 import numpy as np
 from darts.models.forecasting.forecasting_model import GlobalForecastingModel
+from darts import TimeSeries
 import os
 import sys
 
@@ -35,12 +36,11 @@ print = partial(print, flush=True)
 
 from sklearn.linear_model import Ridge
 from typing import Union, Sequence, Optional
-from darts import TimeSeries
 
 
 class ESN(GlobalForecastingModel, BaseEstimator):
    
-    def __init__(self, reservoir_size=1000, sparsity=0.1, radius=0.95, reg=1e-7, alpha=1.0, initLen=250, model_name='ESN_clean', seed=None, W_scaling=1, flip_sign=False):
+    def __init__(self, reservoir_size=1000, sparsity=0.1, radius=0.95, reg=1e-7, alpha=1.0, burn_in_ratio=0.2, model_name='ESN_clean', seed=None, W_scaling=1, flip_sign=False):
 
         
         self.radius = radius
@@ -49,6 +49,7 @@ class ESN(GlobalForecastingModel, BaseEstimator):
         self.sparsity = sparsity
         self.alpha = alpha
         self.reg = reg
+        self.burn_in_ratio = burn_in_ratio
         
         self.model_name = model_name
         self.W_scaling = W_scaling
@@ -56,7 +57,6 @@ class ESN(GlobalForecastingModel, BaseEstimator):
         
         self.inSize = 1
         self.outSize = 1
-        self.initLen = initLen
         
         self.scaler = StandardScaler() # I have found that scaling is quite important for performance, for simplicity I just standarize the input time series. When I predict I invert this transform. 
 
@@ -105,8 +105,7 @@ class ESN(GlobalForecastingModel, BaseEstimator):
 
         return W
      
-    
-    # series is the timeseries array of single measurements, I pass just a single dimensional numpy array instead of a timeseries object,  other arguments are always all none
+        
     def fit(self,
             series: Union[TimeSeries, Sequence[TimeSeries]],
             past_covariates: Optional[Union[TimeSeries, Sequence[TimeSeries]]] = None,
@@ -116,15 +115,19 @@ class ESN(GlobalForecastingModel, BaseEstimator):
         # since fit will be called multiple times from the main for all dynamical systems, I resample the weights each time
         self.sampleWeights()
         
+        series = np.squeeze(series.values())
         series = series.reshape(-1, 1)
         self.scaler.fit(series)
         series = self.scaler.transform(series)
         
-        trainLen = series.shape[0] - 1 
-
-        target_seq = series[self.initLen + 1:trainLen + 1] # target is simply the same series shifted by one timestep
+        trainLen = series.shape[0] - 1
+        self.total_trainLen = series.shape[0]
         
-        X = np.zeros((1 + self.inSize + self.reservoir_size, trainLen - self.initLen)) # Collected reservor states matrix (cols)
+        initLen = int(trainLen*self.burn_in_ratio) # how many timestep you want to let the chain go through before you starting collecting states to fit the readout
+
+        target_seq = series[initLen + 1:trainLen + 1] # target is simply the same series shifted by one timestep
+        
+        X = np.zeros((1 + self.inSize + self.reservoir_size, trainLen - initLen)) # Collected reservor states matrix (cols)
         Yt = target_seq.reshape(1, -1) 
         
         #x = np.random.rand(self.reservoir_size, 1) #TODO, if you want the initial reservoir state to be randomly chosen
@@ -134,12 +137,13 @@ class ESN(GlobalForecastingModel, BaseEstimator):
 
             u = series[t][0]
             x = (1 - self.alpha) * x + self.alpha * np.tanh( np.dot( self.Win, np.vstack((1, u)) ) + self.W @ x )
-            if t >= self.initLen and t < trainLen:
+            if t >= initLen and t < trainLen:
 
-                X[:,t - self.initLen] = np.vstack((1, u, x))[:,0]
+                X[:,t - initLen] = np.vstack((1, u, x))[:,0]
 
         self.last_u = u.copy()
         self.last_x = x.copy()
+        
         
         self.Wout = linalg.solve( np.dot(X,X.T) + self.reg*np.eye(1+self.inSize+self.reservoir_size), np.dot(X,Yt.T) ).T
     
@@ -154,19 +158,37 @@ class ESN(GlobalForecastingModel, BaseEstimator):
         
         x = self.last_x
         u = self.last_u
-        Y = []
+        Y = np.zeros(testLen)
         
         for t in range(testLen):
             
             u = np.dot(self.Wout, np.vstack((1, u, x)))
-            Y.append(u)
+            Y[t] = u
             x = (1 - self.alpha) * x + self.alpha*np.tanh( np.dot( self.Win, np.vstack((1, u)) ) + self.W @ x )
         
-        Y = np.array(Y).reshape(-1, 1)
+        Y = Y.reshape(-1, 1)
+        Y_inverse_transform = self.scaler.inverse_transform(Y)
+       
+        df = pd.DataFrame(np.squeeze(Y_inverse_transform))
+        df.index = range(self.total_trainLen, self.total_trainLen + testLen)
+        predict_ts = TimeSeries.from_dataframe(df)
+                
+        return predict_ts
         
-        return self.scaler.inverse_transform(Y)
+        '''
+        Y_timeseries = TimeSeries.from_dataframe(pd.DataFrame(Y_inverse_transform))
+        
+        return Y_timeseries
+        '''
     
- 
+    def set_hyperparams(self, hyperparams):
+        
+        self.reservoir_size = hyperparams['reservoir_size']
+        self.sparsity = hyperparams['sparsity']
+        self.radius = hyperparams['radius']
+        self.reg = hyperparams['reg']
+        self.alpha = hyperparams['alpha']
+        
         
     def delete(self):
         return 0

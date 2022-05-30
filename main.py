@@ -16,5 +16,8 @@ kwargs['model_name'] = 'ESN_clean'
 
 # To evaluate the ESN model across all dynamical systems do:
 
+#esn = ESN(**kwargs)
+#eval_all_dyn_syst(esn)
+
 esn = ESN(**kwargs)
-eval_all_dyn_syst(esn)
+eval_all_dyn_syst_best_hyperparams(esn, pts_per_period=15)

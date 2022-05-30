@@ -14,7 +14,7 @@ for module_path in module_paths:
         sys.path.append(module_path)
 
 from benchmarks import eval_test
-from models.RC_ESN import esn
+from models.ESN_clean import ESN
 
 from benchmarks.hyperparameter_config import hyperparameter_configs, get_single_config
 from dysts.datasets import *
@@ -32,6 +32,7 @@ args = get_hyperparam_parser()
 
 # to change
 pts_per_period = args.pts_per_period
+
 hyp_file_ending = ''
 results_path_ending = ''
 EVALUATE_VALID = False  # evaluate on separate part of data
@@ -53,6 +54,7 @@ time_delays = [3, 5, 10, int(0.25 * pts_per_period)]
 network_outputs = [1, 4]
 network_outputs = [1]
 
+'''
 import torch
 
 has_gpu = torch.cuda.is_available()
@@ -60,6 +62,7 @@ if not has_gpu:
     warnings.warn("No GPU found.")
 else:
     warnings.warn("GPU working.")
+'''
 
 dataname = os.path.splitext(os.path.basename(os.path.split(input_path)[-1]))[0]
 output_path = cwd + "/hyperparameters/hyperparameters_" + dataname + f"{hyp_file_ending}.json"
@@ -104,7 +107,7 @@ if args.hyperparam_config:
     results_path_ending += "_" + args.hyperparam_config
 
     test_input_path = os.path.dirname(
-        cwd) + f"/dysts/data/test_univariate__pts_per_period_{pts_per_period}__periods_12.json"
+        cwd) + f"/dysts/data/train_univariate__pts_per_period_{pts_per_period}__periods_12.json"
     test_equation_data = load_file(test_input_path)
 
     try:
@@ -122,12 +125,13 @@ def get_model(model_name):
     if model_class in darts.models.__dict__:
         model = getattr(darts.models, model_class)
     else:
-        model = esn
+        model = ESN
 
     return model
 
 
 failed_combinations = collections.defaultdict(list)
+
 for e_i, equation_name in enumerate(equation_data.dataset):
 
     print(f'Equation {e_i} {equation_name}', flush=True)
@@ -147,31 +151,16 @@ for e_i, equation_name in enumerate(equation_data.dataset):
 
     for m_i, model_name in enumerate(parameter_candidates.keys()):
         try:
+            
             print(f'Equation {e_i} {equation_name} Model {m_i} {model_name}', flush=True)
             if SKIP_EXISTING and model_name in all_hyperparameters[equation_name].keys():
                 print(f"Entry for {equation_name} - {model_name} found, skipping it.")
                 continue
 
             model = get_model(model_name)
-
-            if model_name == 'Prophet':
-                df = pd.DataFrame(np.squeeze(y_train_ts.values()))
-                df.index = pd.DatetimeIndex(y_train_ts.time_index)
-                y_train_ts = TimeSeries.from_dataframe(df)
-                df = pd.DataFrame(np.squeeze(y_test_ts.values()))
-                df.index = pd.DatetimeIndex(y_test_ts.time_index)
-                y_test_ts = TimeSeries.from_dataframe(df)
-
-            model_best = model.gridsearch(parameter_candidates[model_name], y_train_ts, val_series=y_test_ts,
-                                          metric=darts.metrics.smape,
-                                          n_jobs=N_JOBS)
+            model_best = model.gridsearch(parameter_candidates[model_name], y_train_ts, val_series=y_test_ts, metric=darts.metrics.smape, n_jobs=N_JOBS)
 
             best_hyperparameters = model_best[1].copy()
-
-            # Write season object to string
-            for hyperparameter_name in best_hyperparameters:
-                if "season" in hyperparameter_name:
-                    best_hyperparameters[hyperparameter_name] = best_hyperparameters[hyperparameter_name].name
 
             all_hyperparameters[equation_name][model_name] = best_hyperparameters
 
