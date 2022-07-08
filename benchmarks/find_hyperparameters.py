@@ -107,7 +107,7 @@ if args.hyperparam_config:
     results_path_ending += "_" + args.hyperparam_config
 
     test_input_path = os.path.dirname(
-        cwd) + f"/dysts/data/train_univariate__pts_per_period_{pts_per_period}__periods_12.json"
+        cwd) + f"/dysts/data/test_univariate__pts_per_period_{pts_per_period}__periods_12.json"
     test_equation_data = load_file(test_input_path)
 
     try:

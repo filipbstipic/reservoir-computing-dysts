@@ -48,7 +48,6 @@ class ESN:
         
         self.model_name = model_name
         self.W_scaling = W_scaling
-        self.flip_sign = flip_sign
         
         self.inSize = 1
         self.outSize = 1
@@ -57,17 +56,20 @@ class ESN:
         
         self.scaler = StandardScaler() # I have found that scaling is quite important for performance, for simplicity I just standarize the input time series. When I predict I invert this transform. 
 
-        self.sampleWeights()
+        #self.sampleWeights()
         
         if seed != None:
             set_seed(seed)
 
     def sampleWeights(self):
         
-        self.W = self.getHiddenMatrix()
-        self.Win = (np.random.rand(self.reservoir_size,1 + self.inSize) - 0.5) * self.W_scaling # TODO I have read that in the literature that Win scaling is important, hence some other ways of initializing W_in could be considered. 
+        #self.W = self.getHiddenMatrix()
+        self.W = np.random.rand(self.reservoir_size,self.reservoir_size) - 0.5
+        rhoW = max(abs(linalg.eig(self.W)[0]))
+        self.W *= self.radius / rhoW
         
-    
+        self.Win = (np.random.rand(self.reservoir_size,1 + self.inSize) - 0.5) * self.W_scaling 
+
     def getHiddenMatrix(self):
         
         success = False
@@ -78,17 +80,11 @@ class ESN:
             try:
 
                 W = sparse.random(self.reservoir_size, self.reservoir_size, density=self.sparsity)
-                W *= self.W_scaling 
-
                 eigenvalues, eigvectors = splinalg.eigs(W)
                 eigenvalues = np.abs(eigenvalues)
                 W = (W / np.max(eigenvalues)) * self.radius
 
                 success = True
-
-                if self.flip_sign:
-
-                    W *= (np.random.binomial(1, 0.5, (self.reservoir_size, self.reservoir_size)) - 0.5)*2
 
             except:
 

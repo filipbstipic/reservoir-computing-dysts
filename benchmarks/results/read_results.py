@@ -134,7 +134,7 @@ result_files_100 = ["results_test_univariate__pts_per_period_100__periods_12_esn
                     "results_test_univariate__pts_per_period_100__periods_12_esn_LSTM.json",
                     "results_test_univariate__pts_per_period_100__periods_12_esn_GRU.json"]
 
-result_files_15 = ["results_test_univariate__pts_per_period_15__periods_12_esn_ESN_torch.json",
+result_files_15 = ["results_test_univariate__pts_per_period_15__periods_12_ESN.json",
                    "results_test_univariate__pts_per_period_15__periods_12_esn_RNN.json",
                    "results_test_univariate__pts_per_period_15__periods_12_esn_LSTM.json",
                    "results_test_univariate__pts_per_period_15__periods_12_esn_GRU.json"]
@@ -187,6 +187,7 @@ def rnn_comparison():
 
 
 if __name__ == "__main__":
+    '''
     rnn_comparison()
     cell_comparison()
 
@@ -202,3 +203,13 @@ if __name__ == "__main__":
     results.sort_results(print_out=False)
     results.average_all_methods()
     print('Finished')
+    '''
+    results = ResultsObject(path='results_test_univariate__pts_per_period_15__periods_12.json', skip_dyn_systems=["PiecewiseCircuit", "AtmosphericRegime"])
+    results.sort_results(print_out=False)
+    results.average_all_methods()
+    
+    results = ResultsObject(path='results_test_univariate__pts_per_period_100__periods_12.json', skip_dyn_systems=["AtmosphericRegime"])
+    results.sort_results(print_out=False)
+    results.average_all_methods()
+    
+    

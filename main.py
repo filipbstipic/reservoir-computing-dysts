@@ -2,7 +2,8 @@ from models.ESN_clean import ESN
 from models.utils import *
 
 kwargs = new_args_dict()
-kwargs['model_name'] = 'ESN_clean'
+kwargs['model_name'] = 'ESN'
+#kwargs['seed'] = 10
 
 # Flags when running main are given below:
 '''
@@ -20,4 +21,4 @@ kwargs['model_name'] = 'ESN_clean'
 #eval_all_dyn_syst(esn)
 
 esn = ESN(**kwargs)
-eval_all_dyn_syst_best_hyperparams(esn, pts_per_period=15)
+eval_all_dyn_syst_best_hyperparams(esn, pts_per_period=100)

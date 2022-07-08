@@ -137,7 +137,7 @@ def eval_all_dyn_syst(model):
     results.get_average_rank(model_name, print_out=True)
     
     
-def eval_all_dyn_syst_best_hyperparams(model, pts_per_period=100):
+def eval_all_dyn_syst_best_hyperparams(model, pts_per_period=100, save_results=False):
     
     cwd = os.path.dirname(os.path.realpath(__file__))
     
@@ -151,9 +151,6 @@ def eval_all_dyn_syst_best_hyperparams(model, pts_per_period=100):
     hyperparameters_file = open(hyperparameter_path)
     hyperparameters = json.load(hyperparameters_file)
     
-    #print(input_path)
-    #print(hyperparameter_path)
-    
     metric_list = [
         'coefficient_of_variation',
         'mae',
@@ -165,10 +162,16 @@ def eval_all_dyn_syst_best_hyperparams(model, pts_per_period=100):
         'smape'
     ]
     equation_data = load_file(input_path)
-    model_name = model.model_name
     failed_combinations = collections.defaultdict(list)
     METRIC = 'smape'
+    model_name = model.model_name
+    
     results_path = os.getcwd() + '/benchmarks/results/results_test_univariate__pts_per_period_' + str(pts_per_period)+ '__periods_12.json'
+    out_results_path = os.getcwd() + '/benchmarks/results/results_test_univariate__pts_per_period_' + str(pts_per_period)+ '__periods_12_ESN.json'
+    
+    with open(results_path, "r") as file:
+        all_results = json.load(file)
+        
     results = ResultsObject(path=results_path)
     results.sort_results(print_out=False, metric=METRIC)
     
@@ -177,7 +180,11 @@ def eval_all_dyn_syst_best_hyperparams(model, pts_per_period=100):
     print("Results path ", results_path)
     
     for equation_name in equation_data.dataset:
-
+        
+        if equation_name == "AthmosfericRegime":
+            
+            continue
+ 
         train_data = np.copy(np.array(equation_data.dataset[equation_name]["values"]))
 
         split_point = int(5 / 6 * len(train_data))
@@ -185,11 +192,16 @@ def eval_all_dyn_syst_best_hyperparams(model, pts_per_period=100):
         y_train_ts, y_test_ts = TimeSeries.from_dataframe(pd.DataFrame(train_data)).split_before(split_point)
 
         try:
-            
+
+            all_results[equation_name][model_name] = dict()
+
             model.set_hyperparams(hyperparameters[equation_name]['ESN'])
+
+            print("hyperparams are", hyperparameters[equation_name]['ESN'])
+
             model.fit(y_train_ts)
             y_val_pred = model.predict(len(y_val))
-
+            
         except Exception as e:
             warnings.warn(f'Could not evaluate {equation_name} for {model_name} {e.args}')
             failed_combinations[model_name].append(equation_name)
@@ -198,18 +210,28 @@ def eval_all_dyn_syst_best_hyperparams(model, pts_per_period=100):
 
         pred_y = TimeSeries.from_dataframe(pd.DataFrame(np.squeeze(y_val_pred.values())))
         true_y = TimeSeries.from_dataframe(pd.DataFrame(np.squeeze(y_val)[:-1]))
+        all_results[equation_name][model_name]["prediction"] = np.squeeze(y_val_pred.values()).tolist()
 
         print('-----', equation_name)
         for metric_name in metric_list:
             metric_func = getattr(darts.metrics.metrics, metric_name)
             score = metric_func(true_y, pred_y)
+            
+            all_results[equation_name][model_name][metric_name] = score
+            
             print(metric_name, score)
             if metric_name == METRIC:
                 results.update_results(equation_name, model_name, score)
 
         # TODO: print ranking relative to others for that dynamical system
     print('Failed combinations', failed_combinations)
+    
     results.get_average_rank(model_name, print_out=True)
+    
+    if save_results:
+        
+        with open(out_results_path, 'w') as fp:
+            json.dump(all_results, fp, indent=4)
 
     
 
@@ -241,7 +263,8 @@ def getNewESNParser():
     parser.add_argument("--radius", help="radius", type=float, default=0.95)
     parser.add_argument("--reg", help="regularization", type=float, default=1e-7)
     parser.add_argument("--alpha", help="alpha", type=float, default=1.0)
-    parser.add_argument("--seed", type=int, default=10)
+    
+    #parser.add_argument("--seed", type=int, default=10)
     # parser.add_argument("--resample", type=str2bool, default=False)
 
     return parser
@@ -253,3 +276,35 @@ def new_args_dict():
 
     args_dict = args.__dict__
     return args_dict
+
+
+'''
+y_val_pred = model.get_best_sig_pred(pred_list, len(y_val))
+
+while y_val_pred == None:
+
+    all_results[equation_name][model_name] = dict()
+
+    if hyperparameters[equation_name]['ESN']['radius'] == 0.5:
+
+        hyperparameters[equation_name]['ESN']['radius'] = 0.75
+
+    else:
+
+        hyperparameters[equation_name]['ESN']['radius'] += 0.1
+        hyperparameters[equation_name]['ESN']['reg'] = 0.0001
+
+    model.set_hyperparams(hyperparameters[equation_name]['ESN'])
+
+    print("hyperparams are", hyperparameters[equation_name]['ESN'])
+
+    pred_list = []
+
+    for i in range(10):
+
+        model.fit(y_train_ts)
+        y_val_pred = model.predict(len(y_val) + 800)
+        pred_list.append(y_val_pred)
+
+    y_val_pred = model.get_best_sig_pred(pred_list, len(y_val))
+'''

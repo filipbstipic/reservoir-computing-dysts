@@ -11,12 +11,9 @@ metric_list = [
     'mae',
     'mape',
     'marre',
-    #'mase', # requires scaling with train partition; difficult to report accurately
     'mse',
-    #'ope', # runs into issues with zero handling
     'r2_score',
     'rmse',
-    #'rmsle', # requires positive only time series
     'smape'
 ]
 

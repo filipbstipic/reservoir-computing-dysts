@@ -27,7 +27,7 @@ from numpy.random import default_rng
 from scipy import stats
 
 from models.utils import set_seed
-
+import esig
 
 import pandas as pd
 from functools import partial
@@ -68,8 +68,12 @@ class ESN(GlobalForecastingModel, BaseEstimator):
 
     def sampleWeights(self):
         
-        self.W = self.getHiddenMatrix()
-        self.Win = (np.random.rand(self.reservoir_size,1 + self.inSize) - 0.5) * self.W_scaling # TODO I have read that in the literature that Win scaling is important, hence some other ways of initializing W_in could be considered. 
+        #self.W = self.getHiddenMatrix()
+        self.W = np.random.rand(self.reservoir_size,self.reservoir_size) - 0.5
+        rhoW = max(abs(linalg.eig(self.W)[0]))
+        self.W *= self.radius / rhoW
+        
+        self.Win = (np.random.rand(self.reservoir_size,1 + self.inSize) - 0.5) * self.W_scaling 
         
     
     def getHiddenMatrix(self):
@@ -117,6 +121,9 @@ class ESN(GlobalForecastingModel, BaseEstimator):
         
         series = np.squeeze(series.values())
         series = series.reshape(-1, 1)
+        
+        self.train_sig = esig.stream2sig(series, depth=1)[1]
+
         self.scaler.fit(series)
         series = self.scaler.transform(series)
         
@@ -168,19 +175,56 @@ class ESN(GlobalForecastingModel, BaseEstimator):
         
         Y = Y.reshape(-1, 1)
         Y_inverse_transform = self.scaler.inverse_transform(Y)
-       
+        
         df = pd.DataFrame(np.squeeze(Y_inverse_transform))
         df.index = range(self.total_trainLen, self.total_trainLen + testLen)
         predict_ts = TimeSeries.from_dataframe(df)
                 
         return predict_ts
         
-        '''
-        Y_timeseries = TimeSeries.from_dataframe(pd.DataFrame(Y_inverse_transform))
         
-        return Y_timeseries
-        '''
+        #Y_timeseries = TimeSeries.from_dataframe(pd.DataFrame(Y_inverse_transform))
+        
+        #return Y_inverse_transform
     
+    def get_best_sig_pred(self, pred_list, y_val_len):
+        
+        closest_sig_pred = None
+        smallest_diff = 10000
+        pred_sig_lists = []
+        print("train sig is", self.train_sig)
+        
+        for pred in pred_list:
+            
+            pred_sig = esig.stream2sig(pred, depth=1)[1]
+            
+            if abs(pred_sig) > 10000 or np.isnan(pred_sig):
+                
+                continue
+                
+            pred_sig_lists.append(pred_sig)
+                        
+            if abs(self.train_sig - abs(pred_sig)) < smallest_diff:
+                
+                smallest_diff = abs(self.train_sig - abs(pred_sig))
+                closest_sig_pred = pred[0:y_val_len]
+        
+        print("all reservoir signatures", pred_sig_lists)
+        print("pred len list", len(pred_sig_lists))
+        
+        if len(pred_sig_lists) == 0:
+            
+            return None
+        
+        else:
+            
+            df = pd.DataFrame(np.squeeze(closest_sig_pred))
+            df.index = range(self.total_trainLen, self.total_trainLen + y_val_len)
+            predict_ts = TimeSeries.from_dataframe(df)
+
+        return predict_ts
+                    
+        
     def set_hyperparams(self, hyperparams):
         
         self.reservoir_size = hyperparams['reservoir_size']
