@@ -12,13 +12,15 @@ __Abstract:__ Chaotic dynamical systems continue to puzzle and amaze practitione
     pip install -r requirements.txt
 
 
-# Rerunning Experiments
+## Re-running Experiments
 
-To run with best found hyperparameters, run python main.py
+To run with best found hyperparameters, run:
+
+    python main.py
 
 To get solid performance for a single hyperparameter setting, run:
 
-python main.py --reservoir_size=1000  --radius=0.9 --sparsity=0.1 --alpha=1.0 --reg=1e-7 --seed=10
+    python main.py --reservoir_size=1000  --radius=0.9 --sparsity=0.1 --alpha=1.0 --reg=1e-7 --seed=10
 
 
 
